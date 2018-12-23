@@ -24,7 +24,6 @@ document.getElementById('add').addEventListener('click', function() {
 });
 
 document.getElementById('item').addEventListener('keydown', function (e) {
-
     let value = this.value;
     if (e.code === 'Enter' && value){    
         addItem (value)
@@ -40,9 +39,7 @@ function addItem (value) {
 }
 
 function renderTodoList() {
-
     if (!data.todo.length && !data.completed.length) return;
-
     for (let i = 0; i < data.todo.length; i++) {         
         let value = data.todo[i];
         addItemToDOM(value);
